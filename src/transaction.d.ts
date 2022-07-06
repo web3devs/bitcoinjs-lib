@@ -49,7 +49,7 @@ export declare class Transaction {
     hashForWitnessV0(inIndex: number, prevOutScript: Buffer, value: number, hashType: number): Buffer;
     getHash(forWitness?: boolean): Buffer;
     getId(): string;
-    toBuffer(buffer?: Buffer, initialOffset?: number): Buffer;
+    toBuffer(buffer?: Buffer, initialOffset?: number, ALLOW_WITNESS?: boolean): Buffer;
     toHex(): string;
     setInputScript(index: number, scriptSig: Buffer): void;
     setWitness(index: number, witness: Buffer[]): void;

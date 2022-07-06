@@ -475,8 +475,8 @@ class Transaction {
       'hex',
     );
   }
-  toBuffer(buffer, initialOffset) {
-    return this.__toBuffer(buffer, initialOffset, true);
+  toBuffer(buffer, initialOffset, ALLOW_WITNESS = true) {
+    return this.__toBuffer(buffer, initialOffset, ALLOW_WITNESS);
   }
   toHex() {
     return this.toBuffer(undefined, undefined).toString('hex');

@@ -599,8 +599,12 @@ export class Transaction {
     return reverseBuffer(this.getHash(false)).toString('hex');
   }
 
-  toBuffer(buffer?: Buffer, initialOffset?: number): Buffer {
-    return this.__toBuffer(buffer, initialOffset, true);
+  toBuffer(
+    buffer?: Buffer,
+    initialOffset?: number,
+    ALLOW_WITNESS: boolean = true,
+  ): Buffer {
+    return this.__toBuffer(buffer, initialOffset, ALLOW_WITNESS);
   }
 
   toHex(): string {
